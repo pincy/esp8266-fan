@@ -1,0 +1,22 @@
+serial:
+  port: /dev/ttyUSB0
+  timeout: 2.0
+mqtt:
+  host: 192.168.178.53
+  port: 1883
+  topic: ZimabladeFAN
+  publishInterval: 60
+controller:
+  timeout: 5.0
+sensors:
+  coretemp*:
+    0: 1
+    35: 41
+    40: 51
+    45: 76
+    50: 101
+  drivetemp*:
+    0: 1
+    35: 41
+    40: 76
+    45: 101
