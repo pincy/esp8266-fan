@@ -24,8 +24,8 @@ def sendPWM(hostname, port, topic, pwm):
     message = json.dumps({"pwm": pwm})
     try:
         publish.single(topic, message, hostname=hostname, port=port)
-    except Exception:
-        logger.error(f"error sending new pwm message!")
+    except Exception as e:
+        logger.error(f"error sending new pwm message!\n{e}")
 
 
 def mainloop(cfg):
